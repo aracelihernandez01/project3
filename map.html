@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
- <head>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <title>Map</title>
 	<link rel="stylesheet" href="css/reset.css">
@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Playball&display=swap" rel="stylesheet">
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&callback=initMap"></script>
+	<script async src="js/script.js"></script>
   </head>
-  <body class="map">
+  <body class="resume">
     <header>
       <nav>
         <ul>
@@ -17,48 +19,18 @@
           <li><a href="aboutme.html">About Me</a></li>
           <li><a href="faith.html">Faith</a></li>
 		  <li><a href="map.html">Map</a></li>
-        </ul>
+		</ul>
+        </div>
+      </nav>
+    </header>
+    <h1 id="maph1">Map</h1>
+    <div id="mapwrapper">
+    <div id="mapcanvas"></div>
+    </div>
     <footer>
-      <p>Made by Araceli Hernandez</p>
-      <p>Contact Information: ahernandez60@hawk.iit.edu</p>    
+      <p class="mapp">Made by Araceli Hernandez p>
+      <p class="mapp">Contact Information: ahernandez60@hawk.iit.edu</p>    
     </footer>
-    <style>
-        /* Set the size of the map */
-        #map {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-    <script>
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 13,
-                center: {lat: 41.8781, lng: -87.6298} // Center the map on Chicago
-            });
-
-            // Add markers for the Nutella Cafe, Millennium Park, and Chinatown
-            var nutellaCafe = new google.maps.Marker({
-                position: {lat: 41.8948, lng: -87.6242},
-                map: map,
-                title: 'Nutella Cafe'
-            });
-
-            var millenniumPark = new google.maps.Marker({
-                position: {lat: 41.8827, lng: -87.6233},
-                map: map,
-                title: 'Millennium Park'
-            });
-
-            var chinatown = new google.maps.Marker({
-                position: {lat: 41.8506, lng: -87.6340},
-                map: map,
-                title: 'Chinatown'
-            });
-        }
-    </script>
-</head>
-<body>
-    <div id="map"></div>
-</body>
+  </body>
 </html>
+
