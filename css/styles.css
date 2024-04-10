@@ -84,3 +84,121 @@ footer {
   padding: 0.625rem 0;
   color: #fff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+body.resume {
+    font-family: 'Courgette', cursive;
+    color: #333;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1, h2, h4, p {
+    margin: 15px 0;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+@media (min-width: 600px) {
+    body.resume {
+        font-size: 18px;
+    }
+
+    header nav ul li {
+        margin: 0 20px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h4, p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 900px) {
+    body.resume {
+        font-size: 20px;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    header nav ul {
+        text-align: left;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        margin: 0 30px;
+    }
+
+    section {
+        margin-left: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h4, p {
+        font-size: 1.4rem;
+    }
+}
