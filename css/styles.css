@@ -96,12 +96,24 @@ footer {
 
 
 
+/* Base styles for the resume page */
 body.resume {
     font-family: 'Courgette', cursive;
     color: #333;
     background-color: #f0f0f0;
     line-height: 1.6;
     padding: 20px;
+    padding-top: 100px; /* Added padding to top to prevent content from being hidden by the header */
+}
+
+/* Base styles for the about me page */
+body.aboutme {
+    font-family: 'Playball', cursive;
+    color: #333;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+    padding: 20px;
+    padding-top: 100px; /* Added padding to top to prevent content from being hidden by the header */
 }
 
 header {
@@ -110,6 +122,10 @@ header {
     padding-top: 20px;
     min-height: 70px;
     border-bottom: #0779e4 3px solid;
+    position: fixed; /* Make the header fixed at the top */
+    width: 100%; /* Ensure the header spans the full width */
+    z-index: 1000; /* Ensure the header is above all other content */
+    top: 0; /* Position the header at the top */
 }
 
 header nav ul {
@@ -139,8 +155,9 @@ section img {
     margin: 0 auto 20px;
 }
 
+/* Media query for screens larger than 600px */
 @media (min-width: 600px) {
-    body.resume {
+    body.resume, body.aboutme {
         font-size: 18px;
     }
 
@@ -165,15 +182,10 @@ section img {
     }
 }
 
+/* Media query for screens larger than 900px */
 @media (min-width: 900px) {
-    body.resume {
+    body.resume, body.aboutme {
         font-size: 20px;
-    }
-
-    header {
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
     }
 
     header nav ul {
