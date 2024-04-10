@@ -95,7 +95,6 @@ footer {
 
 
 
-
 /* Base styles for the resume page */
 body.resume {
     font-family: 'Courgette', cursive;
@@ -103,17 +102,6 @@ body.resume {
     background-color: #f0f0f0;
     line-height: 1.6;
     padding: 20px;
-    padding-top: 100px; /* Added padding to top to prevent content from being hidden by the header */
-}
-
-/* Base styles for the about me page */
-body.aboutme {
-    font-family: 'Playball', cursive;
-    color: #333;
-    background-color: #f0f0f0;
-    line-height: 1.6;
-    padding: 20px;
-    padding-top: 100px; /* Added padding to top to prevent content from being hidden by the header */
 }
 
 header {
@@ -122,10 +110,6 @@ header {
     padding-top: 20px;
     min-height: 70px;
     border-bottom: #0779e4 3px solid;
-    position: fixed; /* Make the header fixed at the top */
-    width: 100%; /* Ensure the header spans the full width */
-    z-index: 1000; /* Ensure the header is above all other content */
-    top: 0; /* Position the header at the top */
 }
 
 header nav ul {
@@ -157,7 +141,7 @@ section img {
 
 /* Media query for screens larger than 600px */
 @media (min-width: 600px) {
-    body.resume, body.aboutme {
+    body.resume {
         font-size: 18px;
     }
 
@@ -173,18 +157,18 @@ section img {
         font-size: 2.5rem;
     }
 
-    h2 {
+    h2, h4 {
         font-size: 2rem;
     }
 
-    h4, p {
+    p {
         font-size: 1.2rem;
     }
 }
 
 /* Media query for screens larger than 900px */
 @media (min-width: 900px) {
-    body.resume, body.aboutme {
+    body.resume {
         font-size: 20px;
     }
 
@@ -206,11 +190,11 @@ section img {
         font-size: 3rem;
     }
 
-    h2 {
+    h2, h4 {
         font-size: 2.5rem;
     }
 
-    h4, p {
+    p {
         font-size: 1.4rem;
     }
 }
