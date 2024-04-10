@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+ <head>
     <meta charset="utf-8">
     <title>Map</title>
 	<link rel="stylesheet" href="css/reset.css">
@@ -18,22 +18,47 @@
           <li><a href="faith.html">Faith</a></li>
 		  <li><a href="map.html">Map</a></li>
         </ul>
-      </nav>
-    </header>
-    <h1>Araceli Hernandez</h1>
-    <section>
-      <h2>Faith</h2>
-      <p>In the years of 2020, I became a new born Christian. I am nothing without my Lord and Savior Jesus Christ.</p>
-      <img src="images/reborn.jpg" alt="Bible Quote of John 3:3 with ombre background">
-      <p>What taught me the importance of having a relationship with God were the YouTube videos from a man named Ray Comfort.</p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/uZdv-TtiMkg?si=XeWEV7HnVOuXsSiM" title="He Didn't Care About God...but was in Tears After Hearing This" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <p>Living Waters: He Didn't Care About God...but was in Tears After Hearing This</p>
-    </section>
+    <footer>
+      <p>Made by Araceli Hernandez</p>
+      <p>Contact Information: ahernandez60@hawk.iit.edu</p>    
+    </footer>
+    <style>
+        /* Set the size of the map */
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: {lat: 41.8781, lng: -87.6298} // Center the map on Chicago
+            });
 
-    <section>
-      <h2>Favorite Bible Verses</h2>
-      <img src="images/verse.jpg" alt="Bible Quote of Psalms 73:26 with flower background">
-      <img src="images/proverbs.jpg" alt="Bible Verse of Proverbs 3:5 with nature background">
-    </section>
-  </body>
+            // Add markers for the Nutella Cafe, Millennium Park, and Chinatown
+            var nutellaCafe = new google.maps.Marker({
+                position: {lat: 41.8948, lng: -87.6242},
+                map: map,
+                title: 'Nutella Cafe'
+            });
+
+            var millenniumPark = new google.maps.Marker({
+                position: {lat: 41.8827, lng: -87.6233},
+                map: map,
+                title: 'Millennium Park'
+            });
+
+            var chinatown = new google.maps.Marker({
+                position: {lat: 41.8506, lng: -87.6340},
+                map: map,
+                title: 'Chinatown'
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="map"></div>
+</body>
 </html>
